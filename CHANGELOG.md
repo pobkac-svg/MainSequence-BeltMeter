@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.3.2 performance test (pre-release)
+
+- Remove full-factory scans, bound history to eight recently viewed belts, reject unrelated events early, and avoid redundant text updates.
+- Native/performance test pending; stable channel unchanged.
+
 ## 0.3.1
 
 - Fix MSCore Manager rejection by matching dependency metadata in manifest.txt and mscore.mod.
