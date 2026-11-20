@@ -1,9 +1,10 @@
 # Changelog
 
-## 0.3.2 performance test (pre-release)
+## 0.3.2
 
 - Remove full-factory scans, bound history to eight recently viewed belts, reject unrelated events early, and avoid redundant text updates.
-- Native/performance test pending; stable channel unchanged.
+- User reports smooth operation in the isolated three-mod test.
+- Promoted to stable; runtime files are identical to the performance-test build.
 
 ## 0.3.1
 

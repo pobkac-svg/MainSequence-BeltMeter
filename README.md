@@ -4,7 +4,7 @@ Measure actual belt throughput per minute.
 
 ## Requirements
 
-Main Sequence, single-player only. Requires [MSCore 0.8.13](https://github.com/xxalex3xx97/MSCore/releases/tag/v0.8.13), a compatible UE4SS installation and [MainSequence-Framework 0.3.4](https://github.com/pobkac-svg/MainSequence-Framework). Tested with UE4SS 4.0.0 and the user's current installed game update; other builds and multiplayer are not verified.
+Main Sequence, single-player only. Requires [MSCore 0.8.13](https://github.com/xxalex3xx97/MSCore/releases/tag/v0.8.13), a compatible UE4SS installation and [MainSequence-Framework 0.3.5](https://github.com/pobkac-svg/MainSequence-Framework). Tested with UE4SS 4.0.0 and the user's current installed game update; other builds and multiplayer are not verified.
 
 ## Installation and updates
 
@@ -12,7 +12,7 @@ Install Framework first, then add `pobkac-svg/MainSequence-BeltMeter` in MSCore 
 
 ## Use
 
-Look at a belt to see measured items/min. Allow the sample window to fill; this measures actual throughput rather than theoretical capacity.
+Look at a belt to start measuring actual items/min. The readout warms up over a 60-second rolling window; it measures arrivals, not theoretical capacity. Up to eight recently viewed belts retain their history for 90 seconds away. The mod no longer pre-samples every belt in the factory.
 
 ## Removal and troubleshooting
 
@@ -20,7 +20,7 @@ Close the game before removing this addon through Manager. Removing an addon sto
 
 ## Compatibility and verification
 
-Version 0.3.1: existing gameplay confirmed by the user after MSCore migration. Manager testing was confirmed by the user; Framework and Recipe Clipboard public downloads were additionally tested through Manager. No extracted game data, user saves or private development history are included here.
+Version 0.3.2: existing gameplay confirmed by the user after MSCore migration. Manager testing was confirmed by the user; Framework and Recipe Clipboard public downloads were additionally tested through Manager. No extracted game data, user saves or private development history are included here.
 
 ## Credits and licence
 
@@ -28,8 +28,8 @@ Our code is MIT-licensed; see LICENSE. Developed with OpenAI Codex. MSCore by xx
 
 ## Manager dependency metadata correction
 
-Release 0.3.1 fixes matching `requires` fields in the download manifest and installed `mscore.mod`. Gameplay is unchanged. Requires the corrected Framework 0.3.4.
+Release 0.3.1 fixes matching `requires` fields in the download manifest and installed `mscore.mod`. Gameplay is unchanged. Requires the corrected Framework 0.3.5.
 
-## Optional periodic-stutter test
+## Performance update
 
-Stable Latest remains 0.3.1. An experimental [performance-test release](https://github.com/pobkac-svg/MainSequence-BeltMeter/releases/tag/v0.3.2-performance-test) is available for a reported stutter. Install both Framework 0.3.5 and Belt Meter 0.3.2 test ZIPs manually as described in the release notes. Improvement on the affected PC is not verified yet.
+Release 0.3.2: Remove full-factory belt discovery. Track at most eight recently viewed belts, expire idle history, filter unrelated item events before resolving the world, and avoid resetting unchanged UI text. Tested by the user with only MSCore, Framework and Belt Meter enabled, with no observed slowdowns. The originally affected friend PC has not retested.
