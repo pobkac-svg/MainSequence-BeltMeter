@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.3.3 ? 2026-11-22
+
+- Count arrivals on Mk. 1, Mk. 2, Mk. 3 and large belts; the old hook covered only the Mk. 1 override.
+- Retain the bounded eight-belt, 60-second rolling sample and remove temporary diagnostic logging.
+- Require Framework 0.3.6; update Walk Through Logistics to 0.3.2 as well if installed.
+
 ## 0.3.2
 
 - Remove full-factory scans, bound history to eight recently viewed belts, reject unrelated events early, and avoid redundant text updates.
